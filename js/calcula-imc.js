@@ -3,7 +3,7 @@ titulo.textContent = "Aparecida Nutricionista";
 
 var pacientes = document.querySelectorAll(".paciente");
 
-for(let i in pacientes){
+for(let i = 0; i < pacientes.length; i++){
    
     let paciente = pacientes[i];
 
@@ -33,9 +33,16 @@ for(let i in pacientes){
     }
 
     if (pesoEhValido && alturaEhValida) {
-        var imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2);
+        
+        tdImc.textContent = calculaIMC(peso,altura);
     }
 
 }
 
+function calculaIMC(peso,altura){
+    let imc = 0;
+
+    imc  = peso / (altura * altura)
+
+    return imc.toFixed(2)
+}
