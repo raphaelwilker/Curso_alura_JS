@@ -13,14 +13,20 @@ botaoAdicionar.addEventListener("click",function(event){
         return;
     }
 
-    let pacientTr = montaTr(paciente);
-
-    let table =  document.querySelector('#tabela-pacientes');
-    table.appendChild(pacientTr);
+    
+    adicionaPacienteNaTabela(paciente)
+    
 
     form.reset();
     document.querySelector("#mensagem-error").innerHTML = "";
 });
+
+function adicionaPacienteNaTabela(paciente){
+
+    let pacientTr = montaTr(paciente); 
+    let table =  document.querySelector('#tabela-pacientes');
+    table.appendChild(pacientTr);
+}
 
 function obtemPacienteDoFormulario(form){
     
