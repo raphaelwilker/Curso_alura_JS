@@ -140,3 +140,32 @@ button[disabled=disabled], button:disabled {
 .grupo-nome{
 	width: 100%;
 }
+
+.info-nome{
+	text-transform: capitalize;
+}
+
+.text-error{
+	color: red;
+	font-weight: bold;
+}
+
+.list-error{
+	margin: 10px 0px ;
+}
+
+.fade-out{
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#filtrar-tabela{
+	width: 200px;
+	margin-bottom: 10px;
+	height: 35px;
+
+}
+
+.hide{
+	display: none;
+}
